@@ -1,0 +1,133 @@
+@import "../../main/colors.scss";
+
+.leftside-navbar {
+  background: $NavBackground;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  width: 104px;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  justify-content: space-around;
+  z-index: 999;
+  transition: 0.3s;
+
+  .leftside-navlink {
+    padding: 21px;
+    transition: 0.2s;
+
+    .leftside-navlink-box {
+      aspect-ratio: 1;
+      height: 100%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      transition: 0.2s;
+      &:hover {
+        background: $MainColor;
+        box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.32);
+        img {
+          filter: brightness(2.5);
+        }
+      }
+      img {
+        transition: 0.1s;
+      }
+    }
+  }
+  .firstB {
+    background: rgba(235, 150, 106, 0.26);
+  }
+  .activeNav {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      border-radius: 20px 0 0 20px;
+      aspect-ratio: 1;
+      animation: navAnim 0.5s;
+      top: -10px;
+      background: $Background;
+      right: -5px;
+      z-index: -1;
+    }
+    .leftside-navlink-box {
+      background: $MainColor;
+      box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.32);
+    }
+    img {
+      filter: brightness(2.5);
+    }
+  }
+}
+@keyframes navAnim {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.burgerbarNav {
+  display: none;
+  height: 50px;
+  aspect-ratio: 1;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  border-radius: 5px;
+  background: $NavBackground;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 999;
+  span {
+    display: block;
+    border-radius: 5px;
+    width: 60%;
+    height: 3px;
+    background: $MainColor;
+    transition: 0.2s;
+  }
+}
+.burgerbarNavActive {
+  span {
+    &:nth-child(1) {
+      transform: translateY(11px) rotate(45deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      transform: translateY(-11px) rotate(-45deg);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .navToggleOff {
+    left: -100%;
+  }
+  .burgerbarNav {
+    display: flex;
+  }
+
+  .leftside-navbar {
+    .leftside-navlink {
+      height: calc(100% / 8);
+      width: 100%;
+
+      .leftside-navlink-box {
+        margin: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+@font-face {
+  font-family: barlow_r;
+  src: url(/src/fonts/Barlow-Regular.ttf);
+}
+@font-face {
+  font-family: barlow_m;
+  src: url(/src/fonts/Barlow-Medium.ttf);
+}
+@font-face {
+  font-family: barlow_sb;
+  src: url(/src/fonts/Barlow-SemiBold.ttf);
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #252836;
+}
+
+.App {
+  height: 100%;
+  padding-left: 150px;
+  transition: 0.4;
+}
+
+h1 {
+  font-family: barlow_sb;
+  font-size: 28px;
+  line-height: 140%;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  font-family: barlow_sb;
+  font-size: 20px;
+  line-height: 140%;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+h3 {
+  font-family: barlow_sb;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+h4 {
+  font-size: 14px;
+  font-family: barlow_sb;
+  color: #ffffff;
+  line-height: 140%;
+  letter-spacing: 0.5px;
+}
+
+input {
+  font-family: barlow_m;
+  letter-spacing: 1px;
+}
+
+button {
+  font-family: barlow_m;
+  letter-spacing: 1px;
+}
+
+p {
+  font-family: barlow_m;
+  font-size: 12px;
+  line-height: 140%;
+  color: #abbbc2;
+  letter-spacing: 0.5px;
+}
+
+.g-7 {
+  width: 70%;
+}
+
+.g-6 {
+  width: 60%;
+}
+
+.g-5 {
+  width: 50%;
+}
+
+.g-4 {
+  width: 40%;
+}
+
+.g-3 {
+  width: 30%;
+}
+
+.g-2 {
+  width: 20%;
+}
+
+.g-55 {
+  width: 55%;
+}
+
+.g-45 {
+  width: 45%;
+}
+
+@media (max-width: 1277px) {
+  .App {
+    padding-left: 125px;
+  }
+}
+@media (max-width: 499px) {
+  .App {
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .homepage {
+    padding: 0 10px;
+    padding-top: 10px;
+  }
+}
+.navToggled {
+  transform: translateX(115px);
+}
