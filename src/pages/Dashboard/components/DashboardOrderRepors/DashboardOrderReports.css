@@ -1,0 +1,95 @@
+.DashboardOrderReports {
+  width: 100%;
+  background: #1f1d2b;
+  height: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+.DashboardOrderReports .ReportsStarter {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.DashboardOrderReports .ReportsStarter .name {
+  color: #ffffff;
+  font-family: barlow_sb;
+  letter-spacing: 2px;
+  font-size: 22px;
+}
+.DashboardOrderReports .ReportsStarter .block {
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  color: #ffffff;
+  font-family: barlow_m;
+  letter-spacing: 1px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #393c49;
+}
+.DashboardOrderReports .ReportsStarter .block img {
+  height: 24px;
+  margin-right: 10px;
+}
+.DashboardOrderReports .CatergoriesReport {
+  display: flex;
+  color: #ffffff;
+  font-family: barlow_m;
+  font-size: 17px;
+  padding: 0px 30px;
+  margin-bottom: 15px;
+}
+.DashboardOrderReports .lineReport {
+  height: 1px;
+  background-color: #393c49;
+  width: 100%;
+  margin: 10px 0;
+  margin-bottom: 0px;
+}
+.DashboardOrderReports .ProfileReportsRow {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+  padding-top: 20px;
+  overflow-y: scroll;
+  height: 450px;
+  gap: 35px;
+}
+.DashboardOrderReports .ProfileReportsRow::-webkit-scrollbar {
+  width: 5px;
+  background: #2b283b;
+}
+.DashboardOrderReports .ProfileReportsRow::-webkit-scrollbar-thumb {
+  background: #38344c;
+}
+
+@media screen and (max-width: 771px) {
+  .DashboardOrderReports .CatergoriesReport {
+    display: none;
+  }
+  .DashboardOrderReports .ReportProfileBlock {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom: 1px solid #393c49;
+    padding-bottom: 40px;
+  }
+  .DashboardOrderReports .ReportProfileBlock .RowSt {
+    flex-direction: column;
+  }
+  .DashboardOrderReports .ReportProfileBlock div {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-right: 0px;
+  }
+  .DashboardOrderReports .ReportProfileBlock .RowSt,
+  .DashboardOrderReports .ReportProfileBlock .getDR {
+    font-size: 14px;
+  }
+}
